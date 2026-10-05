@@ -41,3 +41,33 @@
   --sombra: 0 2px 4px rgba(0, 0, 0, 0.25);
   --sombra-tarjeta: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
+
+
+/* ---------- Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
