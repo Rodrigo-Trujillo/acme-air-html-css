@@ -1,0 +1,43 @@
+/* ==========================================================
+   ACME AIR - style.css
+   Variables, reset, tipografía base y componentes comunes
+   ========================================================== */
+
+:root {
+  /* Colores */
+  --color-degradado-inicio: #d13cff;
+  --color-degradado-fin: #00b0ff;
+  --degradado: linear-gradient(90deg, var(--color-degradado-inicio), var(--color-degradado-fin));
+  --color-primario: #2196f3;
+  --color-primario-hover: #1976d2;   /* tomar de la maqueta */
+  --color-texto: #212121;
+  --color-texto-suave: #757575;
+  --color-borde: #e0e0e0;
+  --color-fondo: #ffffff;
+  --color-fondo-suave: #f5f5f5;
+  --color-estado-a-tiempo: #2e7d32;  /* tomar de la maqueta */
+  --color-estado-aterrizo: #757575;  /* tomar de la maqueta */
+
+  /* Tipografía */
+  --fuente: 'Poppins', 'Open Sans', sans-serif;
+  --fs-base: 1rem;
+  --fs-pequena: 0.875rem;
+  --fs-titulo: clamp(1.5rem, 1.1rem + 1.6vw, 2rem);
+  --fw-normal: 400;
+  --fw-media: 500;
+  --fw-negrita: 600;
+
+  /* Espaciados */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 1rem;
+  --esp-4: 1.5rem;
+  --esp-5: 2rem;
+  --esp-6: 3rem;
+
+  /* Formas y sombras */
+  --radio: 8px;
+  --radio-tarjeta: 24px;
+  --sombra: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --sombra-tarjeta: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
