@@ -96,3 +96,26 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+/* ---------- Encabezado con degradado ---------- */
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-5) var(--esp-3) var(--esp-6);
+  background: var(--degradado);
+  color: var(--color-fondo);
+  text-align: center;
+}
+
+.app-header__icono {
+  width: 3rem;
+  height: auto;
+}
+
+.app-header__marca {
+  font-size: var(--fs-pequena);
+  font-weight: var(--fw-media);
+}
