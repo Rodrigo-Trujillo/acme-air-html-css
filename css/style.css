@@ -119,3 +119,33 @@ a:hover {
   font-size: var(--fs-pequena);
   font-weight: var(--fw-media);
 }
+
+
+/* ---------- Botones ---------- */
+.btn {
+  display: block;
+  width: 100%;
+  padding: var(--esp-3);
+  border: none;
+  border-radius: var(--radio);
+  font-family: var(--fuente);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-negrita);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primario:hover {
+  background-color: var(--color-primario-hover);
+  transform: scale(1.02);
+  text-decoration: none;
+}
