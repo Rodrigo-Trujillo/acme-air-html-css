@@ -20,7 +20,17 @@
 
   <main class="app-card app-card--plana">
     <h1>Iniciar Sesión</h1>
-    <!-- formulario de login -->
+    <form class="form" action="menu.html" method="get">
+      <div class="campo">
+        <label class="sr-only" for="email">Email</label>
+        <input class="campo__input" type="email" id="email" name="email" placeholder="Email" autocomplete="email">
+      </div>
+      <div class="campo">
+        <label class="sr-only" for="password">Contraseña</label>
+        <input class="campo__input" type="password" id="password" name="password" placeholder="Contraseña" autocomplete="current-password">
+      </div>
+      <button class="btn btn-primario" type="submit">Ingresar</button>
+    </form>
   </main>
 
   <footer class="app-footer">
