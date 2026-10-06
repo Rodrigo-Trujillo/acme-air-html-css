@@ -11,6 +11,12 @@ body {
   min-height: 100vh;
 }
 
+.pagina {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .app-card {
   display: flex;
   flex-direction: column;
@@ -22,6 +28,10 @@ body {
   padding: var(--esp-4) var(--esp-3);
   background-color: var(--color-fondo);
   border-radius: var(--radio-tarjeta) var(--radio-tarjeta) 0 0;
+}
+
+.app-card--ancha {
+  max-width: 56rem;
 }
 
 .app-card--plana {
@@ -52,22 +62,46 @@ body {
   display: flex;
   align-items: center;
   gap: var(--esp-3);
+  padding-bottom: var(--esp-3);
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .usuario__avatar {
   flex-shrink: 0;
   width: 3.5rem;
   height: 3.5rem;
+  border: 1px solid var(--color-borde);
   border-radius: 50%;
   object-fit: cover;
 }
 
 .usuario__nombre {
-  font-weight: var(--fw-negrita);
+  font-size: 1.375rem;
+  line-height: 1.2;
 }
 
 .usuario__salir {
   font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+  text-decoration: underline;
+}
+
+/* ---------- Saludo del menú ---------- */
+.saludo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  text-align: center;
+}
+
+.saludo__pregunta {
+  font-size: 1.25rem;
+}
+
+.saludo__salir {
+  color: var(--color-texto-suave);
+  text-decoration: underline;
 }
 
 /* ---------- Tarjetas (menú y vuelos) ---------- */
@@ -94,13 +128,24 @@ body {
 
 .tarjeta__icono {
   flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .tarjeta__texto {
-  flex: 1;
   font-weight: var(--fw-media);
+}
+
+.tarjeta__descripcion {
+  display: none;
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
 }
 
 .tarjeta__chevron {
@@ -109,19 +154,39 @@ body {
   height: 1.25rem;
 }
 
-/* ---------- Tarjetas de vuelo y estados ---------- */
+/* ---------- Tarjetas de vuelo ---------- */
 .lista-vuelos {
   display: grid;
   gap: var(--esp-3);
 }
 
+.vuelos__ruta {
+  color: var(--color-texto-suave);
+}
+
 .tarjeta__datos {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  gap: var(--esp-1);
   min-width: 0;
 }
 
-.tarjeta__titulo {
-  font-weight: var(--fw-negrita);
+.tarjeta__lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--esp-1);
+  text-align: right;
+}
+
+.tarjeta--vuelo {
+  gap: var(--esp-2);
+}
+
+.tarjeta--vuelo .tarjeta__icono {
+  width: 2rem;
+  height: 2rem;
 }
 
 .tarjeta__detalle {
@@ -129,23 +194,33 @@ body {
   color: var(--color-texto-suave);
 }
 
-.tarjeta__precio {
+.tarjeta__datos .tarjeta__detalle:first-child {
+  white-space: nowrap;
+}
+
+.tarjeta__detalle--fuerte {
   font-weight: var(--fw-negrita);
   white-space: nowrap;
 }
 
-.estado {
-  font-size: var(--fs-pequena);
+.tarjeta__codigo {
+  font-size: 1.5rem;
   font-weight: var(--fw-negrita);
+  color: var(--color-texto-suave);
+}
+
+.tarjeta__precio {
+  font-size: 1.25rem;
+  font-weight: var(--fw-negrita);
+  color: var(--color-texto-suave);
+  white-space: nowrap;
+}
+
+.estado {
+  font-size: 1.125rem;
+  font-weight: var(--fw-negrita);
+  color: var(--color-texto-suave);
   text-transform: uppercase;
-}
-
-.estado--a-tiempo {
-  color: var(--color-estado-a-tiempo);
-}
-
-.estado--aterrizo {
-  color: var(--color-estado-aterrizo);
 }
 
 /* ---------- Barra lateral (solo escritorio) ---------- */

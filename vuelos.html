@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vuelos disponibles | ACME AIR</title>
   <meta name="description" content="Vuelos disponibles para tu búsqueda en ACME AIR">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,11 +16,10 @@
 </head>
 <body>
   <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+    <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
   </header>
 
-  <main class="app-card">
+  <main class="app-card app-card--ancha">
     <div class="usuario">
       <img class="usuario__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
       <div class="usuario__datos">
@@ -28,34 +28,44 @@
       </div>
     </div>
 
-    <h1 class="titulo-divisor">Vuelos Disponibles</h1>
+    <h1>Vuelos disponibles</h1>
+    <p class="vuelos__ruta">Bogotá - Barranquilla<br>Septiembre - 29</p>
     <section class="lista-vuelos" aria-label="Vuelos disponibles">
       <a class="tarjeta tarjeta--vuelo" href="checkin.html">
         <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Medellín</p>
-          <p class="tarjeta__detalle">Oct 10 · 05:30 - 06:30 · VAA025</p>
+          <p class="tarjeta__detalle">05:30 - 06:30</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
         </div>
-        <p class="tarjeta__precio">COP 450.000</p>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA025</p>
+          <p class="tarjeta__precio">COP 150.600</p>
+        </div>
       </a>
       <a class="tarjeta tarjeta--vuelo" href="checkin.html">
         <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Cali</p>
-          <p class="tarjeta__detalle">Oct 12 · 08:15 - 09:25 · VAA031</p>
+          <p class="tarjeta__detalle">10:30 - 12:05</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
         </div>
-        <p class="tarjeta__precio">COP 380.000</p>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA412</p>
+          <p class="tarjeta__precio">COP 260.050</p>
+        </div>
       </a>
       <a class="tarjeta tarjeta--vuelo" href="checkin.html">
         <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Cartagena</p>
-          <p class="tarjeta__detalle">Oct 14 · 13:40 - 15:10 · VAA047</p>
+          <p class="tarjeta__detalle">14:15 - 15:45</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
         </div>
-        <p class="tarjeta__precio">COP 520.600</p>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA836</p>
+          <p class="tarjeta__precio">COP 150.600</p>
+        </div>
       </a>
     </section>
-    <a class="btn btn-primario" href="menu.html">Volver al menú principal</a>
+    <a class="btn btn-primario" href="menu.html" title="Volver al menú principal">Volver</a>
   </main>
 
   <footer class="app-footer">

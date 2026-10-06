@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Menú principal | ACME AIR</title>
-  <meta name="description" content="Menú principal de ACME AIR: buscar vuelos, registro de entrada y mis vuelos">
+  <meta name="description" content="Menú principal de ACME AIR: buscar vuelos, check in y mis vuelos">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,44 +14,76 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-  <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
-  </header>
-
-  <main class="app-card">
-    <div class="usuario">
-      <img class="usuario__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
-      <div class="usuario__datos">
-        <p class="usuario__nombre">John Doe</p>
-        <a class="usuario__salir" href="index.html">Cerrar Sesión</a>
-      </div>
+<body class="pagina-menu">
+  <aside class="sidebar" aria-label="Menú lateral">
+    <div class="sidebar__marca">
+      <img class="sidebar__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
     </div>
-
-    <h1>¿Qué quieres hacer?</h1>
-
-    <nav class="lista-tarjetas" aria-label="Menú principal">
-      <a class="tarjeta" href="buscar-vuelos.html">
-        <img class="tarjeta__icono" src="imagen/iconos/buscar-vuelos.svg" alt="">
-        <span class="tarjeta__texto">Buscar vuelos</span>
-        <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+    <div class="sidebar__perfil">
+      <img class="sidebar__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
+      <p class="sidebar__saludo">¡Hola John Doe!</p>
+      <p class="sidebar__pregunta">¿Qué quieres hacer?</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Opciones">
+      <a class="sidebar__enlace" href="buscar-vuelos.html">
+        <img class="sidebar__icono" src="imagen/iconos/buscar-vuelos.svg" alt="">
+        Buscar vuelos
       </a>
-      <a class="tarjeta" href="checkin.html">
-        <img class="tarjeta__icono" src="imagen/iconos/checkin.svg" alt="">
-        <span class="tarjeta__texto">Registro de entrada</span>
-        <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+      <a class="sidebar__enlace" href="checkin.html">
+        <img class="sidebar__icono" src="imagen/iconos/checkin.svg" alt="">
+        Check In
       </a>
-      <a class="tarjeta" href="mis-vuelos.html">
-        <img class="tarjeta__icono" src="imagen/iconos/mis-vuelos.svg" alt="">
-        <span class="tarjeta__texto">Mis vuelos</span>
-        <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+      <a class="sidebar__enlace" href="mis-vuelos.html">
+        <img class="sidebar__icono" src="imagen/iconos/mis-vuelos.svg" alt="">
+        Mis Vuelos
       </a>
     </nav>
-  </main>
+    <a class="sidebar__salir" href="index.html">Cerrar Sesión</a>
+  </aside>
 
-  <footer class="app-footer">
-    <small>© 2026 ACME AIR</small>
-  </footer>
+  <div class="pagina">
+    <header class="app-header">
+      <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
+    </header>
+
+    <main class="app-card">
+      <div class="saludo">
+        <h1>¡Hola John Doe!</h1>
+        <p class="saludo__pregunta">¿Qué quieres hacer?</p>
+        <a class="saludo__salir" href="index.html">Cerrar Sesión</a>
+      </div>
+
+      <nav class="lista-tarjetas" aria-label="Menú principal">
+        <a class="tarjeta" href="buscar-vuelos.html">
+          <img class="tarjeta__icono" src="imagen/iconos/buscar-vuelos.svg" alt="">
+          <span class="tarjeta__cuerpo">
+            <span class="tarjeta__texto">Buscar vuelos</span>
+            <span class="tarjeta__descripcion">Encuentra y reserva tu próxima aventura.</span>
+          </span>
+          <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+        </a>
+        <a class="tarjeta" href="checkin.html">
+          <img class="tarjeta__icono" src="imagen/iconos/checkin.svg" alt="">
+          <span class="tarjeta__cuerpo">
+            <span class="tarjeta__texto">Check In</span>
+            <span class="tarjeta__descripcion">Obtén tu pase de abordar de forma rápida y sencilla.</span>
+          </span>
+          <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+        </a>
+        <a class="tarjeta" href="mis-vuelos.html">
+          <img class="tarjeta__icono" src="imagen/iconos/mis-vuelos.svg" alt="">
+          <span class="tarjeta__cuerpo">
+            <span class="tarjeta__texto">Mis Vuelos</span>
+            <span class="tarjeta__descripcion">Gestiona tus próximos viajes y consulta los detalles.</span>
+          </span>
+          <img class="tarjeta__chevron" src="imagen/iconos/chevron.svg" alt="">
+        </a>
+      </nav>
+    </main>
+
+    <footer class="app-footer">
+      <small>© 2026 ACME AIR</small>
+    </footer>
+  </div>
 </body>
 </html>
