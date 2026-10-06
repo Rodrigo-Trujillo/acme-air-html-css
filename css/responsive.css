@@ -1,0 +1,32 @@
+/* ============================================================
+   responsive.css — Media queries (mobile-first)
+   Puntos de quiebre: 320px (móvil), 768px (tablet), 1024px (escritorio)
+   Los estilos base (móvil) viven en style.css, layout.css y forms.css.
+   Aquí solo se ajusta lo que cambia al crecer la pantalla.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   MÓVIL — desde 320px
+   Los estilos base ya son para móvil; aquí solo van ajustes
+   puntuales para pantallas muy pequeñas.
+   ------------------------------------------------------------ */
+@media (min-width: 320px) {
+  /* Ajustes para móvil: se completan al terminar cada vista */
+}
+
+/* ------------------------------------------------------------
+   TABLET — desde 768px
+   Más espacio: la tarjeta se centra y los textos crecen un poco.
+   ------------------------------------------------------------ */
+@media (min-width: 768px) {
+  /* Ajustes para tablet: se completan al terminar cada vista */
+}
+
+/* ------------------------------------------------------------
+   ESCRITORIO — desde 1024px
+   La vista se centra con padding lateral. El menú podrá mostrar
+   su barra lateral si el profesor lo confirma.
+   ------------------------------------------------------------ */
+@media (min-width: 1024px) {
+  /* Ajustes para escritorio: se completan al terminar cada vista */
+}
