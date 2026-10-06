@@ -32,3 +32,15 @@
   min-height: calc(100vh - var(--header-height));
   padding: 1.5rem 1rem;
 }
+
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--color-bg-main, #ffffff);
+}
