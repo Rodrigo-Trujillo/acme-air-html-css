@@ -1,0 +1,6 @@
+/* ============================================================
+   responsive.css — Media queries (mobile-first)
+   Puntos de quiebre: 320px (móvil), 768px (tablet), 1024px (escritorio)
+   Los estilos base (móvil) viven en style.css, layout.css y forms.css.
+   Aquí solo se ajusta lo que cambia al crecer la pantalla.
+   ============================================================ */
