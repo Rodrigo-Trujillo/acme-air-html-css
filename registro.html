@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crear cuenta | ACME AIR</title>
+  <title>Registro | ACME AIR</title>
   <meta name="description" content="Registro de nuevos usuarios en ACME AIR">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,24 +16,23 @@
 </head>
 <body>
   <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+    <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
   </header>
 
   <main class="app-card">
-    <h1>Crear cuenta</h1>
+    <h1 class="titulo-divisor">Registro</h1>
     <form class="form" action="crear-contraseña.html" method="get">
       <div class="campo">
-        <label class="sr-only" for="nombre">Nombre completo</label>
-        <input class="campo__input" type="text" id="nombre" name="nombre" placeholder="Nombre completo" autocomplete="name">
+        <label class="sr-only" for="nombre">Nombre Completo</label>
+        <input class="campo__input" type="text" id="nombre" name="nombre" placeholder="Nombre Completo" autocomplete="name">
       </div>
       <div class="campo">
-        <label class="sr-only" for="identificacion">Identificación</label>
-        <input class="campo__input" type="text" id="identificacion" name="identificacion" placeholder="Identificación" inputmode="numeric">
+        <label class="sr-only" for="identificacion">No. Identificación</label>
+        <input class="campo__input" type="text" id="identificacion" name="identificacion" placeholder="No. Identificación" inputmode="numeric">
       </div>
       <div class="campo">
-        <label class="sr-only" for="email">Correo electrónico</label>
-        <input class="campo__input" type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email">
+        <label class="sr-only" for="email">E-mail</label>
+        <input class="campo__input" type="email" id="email" name="email" placeholder="E-mail" autocomplete="email">
       </div>
       <div class="campo">
         <label class="sr-only" for="telefono">Teléfono</label>

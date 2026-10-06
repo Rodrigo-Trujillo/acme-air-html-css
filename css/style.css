@@ -85,11 +85,12 @@ body {
 
 h1 {
   font-size: var(--fs-titulo);
-  font-weight: var(--fw-negrita);
+  font-weight: var(--fw-normal);
+  text-align: center;
 }
 
 a {
-  color: var(--color-primario);
+  color: var(--color-primario-hover);
   text-decoration: none;
 }
 
@@ -101,23 +102,14 @@ a:hover {
 /* ---------- Encabezado con degradado ---------- */
 .app-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--esp-2);
-  padding: var(--esp-5) var(--esp-3) var(--esp-6);
+  justify-content: center;
+  padding: var(--esp-4) var(--esp-3) var(--esp-5);
   background: var(--degradado);
-  color: var(--color-fondo);
-  text-align: center;
 }
 
-.app-header__icono {
-  width: 3rem;
+.app-header__logo {
+  width: 12rem;
   height: auto;
-}
-
-.app-header__marca {
-  font-size: var(--fs-pequena);
-  font-weight: var(--fw-media);
 }
 
 
@@ -167,4 +159,16 @@ a:hover {
 :focus-visible {
   outline: 3px solid var(--color-primario);
   outline-offset: 2px;
+}
+
+
+/* ---------- Preferencias de movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn-primario {
+    transition: none;
+  }
+
+  .btn-primario:hover {
+    transform: none;
+  }
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Recuperar contraseña | ACME AIR</title>
   <meta name="description" content="Recuperar contraseña de ACME AIR">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,18 +16,17 @@
 </head>
 <body>
   <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+    <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
   </header>
 
   <main class="app-card">
-    <h1>Recuperar Contraseña</h1>
+    <h1 class="titulo-divisor">Recuperar Contraseña</h1>
     <form class="form" action="crear-contraseña.html" method="get">
-      <p class="form__ayuda">Ingresa tu correo electrónico y te enviaremos las instrucciones para crear una nueva contraseña.</p>
       <div class="campo">
-        <label class="sr-only" for="email">Correo electrónico</label>
-        <input class="campo__input" type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email">
+        <label class="sr-only" for="email">Email</label>
+        <input class="campo__input" type="email" id="email" name="email" placeholder="Email" autocomplete="email">
       </div>
+      <p class="form__ayuda">Si el e-mail se encuentra registrado se enviará un link para continuar con la recuperación de su contraseña.</p>
       <button class="btn btn-primario" type="submit">Enviar</button>
     </form>
   </main>

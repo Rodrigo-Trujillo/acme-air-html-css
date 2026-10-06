@@ -19,11 +19,22 @@
   /* Sin ajustes: usa el mismo formulario fluido */
 
   /* -- menu (Sebastián) -- */
+  /* Sin ajustes: tarjetas en una columna */
+
   /* -- registro (Sebastián) -- */
+  /* Sin ajustes: usa el mismo formulario fluido */
+
   /* -- mis-vuelos (Sebastián) -- */
+  /* Sin ajustes: tarjetas en una columna */
+
   /* -- buscar-vuelos (Dainer) -- */
+  /* Sin ajustes: usa el mismo formulario fluido */
+
   /* -- vuelos (Dainer) -- */
+  /* Sin ajustes: tarjetas en una columna */
+
   /* -- checkin (Dainer) -- */
+  /* Sin ajustes: usa el mismo formulario fluido */
 }
 
 /* ===== 768px: tableta ===== */
@@ -43,15 +54,33 @@
     padding: var(--esp-5) var(--esp-4);
   }
 
+  .app-header__logo {
+    width: 14rem;
+  }
+
   /* -- crear-contraseña (Rodrigo) -- */
   /* Usa los mismos ajustes de la tarjeta de recuperar */
 
   /* -- menu (Sebastián) -- */
+  /* Sin ajustes: en tableta el menú sigue en una columna */
+
   /* -- registro (Sebastián) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
+
   /* -- mis-vuelos (Sebastián) -- */
+  /* Tarjetas de vuelo en dos columnas */
+  .lista-vuelos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* -- buscar-vuelos (Dainer) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
+
   /* -- vuelos (Dainer) -- */
+  /* Usa las dos columnas de .lista-vuelos definidas arriba */
+
   /* -- checkin (Dainer) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
 }
 
 /* ===== 1024px: escritorio (vista centrada con padding lateral) ===== */
@@ -85,9 +114,183 @@
   /* Usa los mismos ajustes de la tarjeta de recuperar */
 
   /* -- menu (Sebastián): barra lateral + grid de tarjetas -- */
+  .pagina-menu {
+    flex-direction: row;
+    background-color: var(--color-fondo-suave);
+  }
+
+  .pagina-menu .app-header {
+    display: none;
+  }
+
+  .pagina-menu .sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    width: 16.25rem;
+    height: 100vh;
+    background-color: var(--color-fondo);
+    border-right: 1px solid var(--color-borde);
+  }
+
+  .sidebar__marca {
+    display: flex;
+    justify-content: center;
+    padding: var(--esp-3);
+    background: var(--degradado);
+  }
+
+  .sidebar__logo {
+    width: 11rem;
+    height: auto;
+  }
+
+  .sidebar__perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--esp-1);
+    padding: var(--esp-4) var(--esp-3);
+    text-align: center;
+  }
+
+  .sidebar__avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-bottom: var(--esp-2);
+    border-radius: 50%;
+  }
+
+  .sidebar__saludo {
+    font-weight: var(--fw-negrita);
+  }
+
+  .sidebar__pregunta {
+    font-size: var(--fs-pequena);
+    color: var(--color-texto-suave);
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+    padding: var(--esp-3);
+  }
+
+  .sidebar__enlace {
+    display: flex;
+    align-items: center;
+    gap: var(--esp-3);
+    padding: var(--esp-2) var(--esp-3);
+    border-radius: var(--radio);
+    font-size: var(--fs-pequena);
+    font-weight: var(--fw-media);
+    color: var(--color-texto-suave);
+  }
+
+  .sidebar__enlace:hover {
+    background-color: var(--color-fondo-suave);
+    text-decoration: none;
+  }
+
+  .sidebar__icono {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .sidebar__salir {
+    margin-top: auto;
+    padding: var(--esp-3) var(--esp-4);
+    font-size: var(--fs-pequena);
+    color: var(--color-texto-suave);
+  }
+
+  .pagina-menu .pagina {
+    flex: 1;
+  }
+
+  .pagina-menu .app-card {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+    padding: var(--esp-5);
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* El saludo pasa a la barra lateral; el h1 queda solo para lectores de pantalla */
+  .pagina-menu .saludo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .pagina-menu .lista-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--esp-4);
+  }
+
+  .pagina-menu .tarjeta {
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--esp-2);
+    padding: var(--esp-5) var(--esp-3);
+    border: none;
+    text-align: center;
+  }
+
+  .pagina-menu .tarjeta:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .pagina-menu .tarjeta__icono {
+    box-sizing: content-box;
+    padding: var(--esp-3);
+    background-color: var(--color-fondo-suave);
+    border-radius: 50%;
+  }
+
+  .pagina-menu .tarjeta__cuerpo {
+    flex: 0 1 auto;
+    align-items: center;
+  }
+
+  .pagina-menu .tarjeta__texto {
+    font-size: 1.125rem;
+    font-weight: var(--fw-negrita);
+  }
+
+  .pagina-menu .tarjeta__descripcion {
+    display: block;
+  }
+
+  .pagina-menu .tarjeta__chevron {
+    display: none;
+  }
+
+  .pagina-menu .app-footer {
+    background-color: transparent;
+  }
+
   /* -- registro (Sebastián) -- */
+  /* Sin ajustes: tarjeta centrada (ver recuperar) */
+
   /* -- mis-vuelos (Sebastián) -- */
+  /* Sin ajustes: dos columnas desde tableta */
+
   /* -- buscar-vuelos (Dainer) -- */
+  /* Sin ajustes: tarjeta centrada (ver recuperar) */
+
   /* -- vuelos (Dainer) -- */
+  /* Sin ajustes: dos columnas desde tableta */
+
   /* -- checkin (Dainer) -- */
+  /* Sin ajustes: tarjeta centrada (ver recuperar) */
 }

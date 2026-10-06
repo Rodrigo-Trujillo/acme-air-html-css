@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mis vuelos | ACME AIR</title>
   <meta name="description" content="Listado de vuelos reservados y vuelos previos en ACME AIR">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,11 +16,10 @@
 </head>
 <body>
   <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+    <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
   </header>
 
-  <main class="app-card">
+  <main class="app-card app-card--ancha">
     <div class="usuario">
       <img class="usuario__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
       <div class="usuario__datos">
@@ -28,31 +28,49 @@
       </div>
     </div>
 
-    <h1 class="titulo-divisor">Mis vuelos</h1>
+    <h1>Mis Vuelos</h1>
     <section class="lista-vuelos" aria-label="Listado de vuelos">
       <div class="tarjeta tarjeta--vuelo">
+        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">VAA025</p>
-          <p class="tarjeta__detalle">Bogotá - Barranquilla · Sep 29</p>
+          <p class="tarjeta__detalle">05:30 - 06:30</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+          <p class="tarjeta__detalle">Sep 29</p>
         </div>
-        <span class="estado estado--a-tiempo">A tiempo</span>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA025</p>
+          <p class="estado">A tiempo</p>
+          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+        </div>
       </div>
       <div class="tarjeta tarjeta--vuelo">
+        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">VAA140</p>
-          <p class="tarjeta__detalle">Medellín - Cartagena · Oct 12</p>
+          <p class="tarjeta__detalle">10:30 - 12:00</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+          <p class="tarjeta__detalle">Jul 05</p>
         </div>
-        <span class="estado estado--a-tiempo">A tiempo</span>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA185</p>
+          <p class="estado">Aterrizó</p>
+          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+        </div>
       </div>
       <div class="tarjeta tarjeta--vuelo">
+        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">VAA087</p>
-          <p class="tarjeta__detalle">Cali - Bogotá · Sep 15</p>
+          <p class="tarjeta__detalle">05:30 - 06:30</p>
+          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+          <p class="tarjeta__detalle">Feb 04</p>
         </div>
-        <span class="estado estado--aterrizo">Aterrizó</span>
+        <div class="tarjeta__lateral">
+          <p class="tarjeta__detalle">VAA800</p>
+          <p class="estado">Aterrizó</p>
+          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+        </div>
       </div>
     </section>
-    <a class="btn btn-primario" href="menu.html">Volver al menú principal</a>
+    <a class="btn btn-primario" href="menu.html" title="Volver al menú principal">Volver</a>
   </main>
 
   <footer class="app-footer">
