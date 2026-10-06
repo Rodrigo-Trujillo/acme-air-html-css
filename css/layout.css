@@ -1,0 +1,12 @@
+/* Reset y estructura general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-height: 70px;
+  --sidebar-width: 260px;
+  --footer-height: 60px;
+}
