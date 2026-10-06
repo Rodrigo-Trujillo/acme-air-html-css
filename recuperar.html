@@ -21,7 +21,14 @@
 
   <main class="app-card">
     <h1>Recuperar Contraseña</h1>
-    <!-- formulario de recuperación -->
+    <form class="form" action="crear-contraseña.html" method="get">
+      <p class="form__ayuda">Ingresa tu correo electrónico y te enviaremos las instrucciones para crear una nueva contraseña.</p>
+      <div class="campo">
+        <label class="sr-only" for="email">Correo electrónico</label>
+        <input class="campo__input" type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email">
+      </div>
+      <button class="btn btn-primario" type="submit">Enviar</button>
+    </form>
   </main>
 
   <footer class="app-footer">
