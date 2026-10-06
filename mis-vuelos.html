@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vuelos disponibles | ACME AIR</title>
-  <meta name="description" content="Vuelos disponibles para tu búsqueda en ACME AIR">
+  <title>Mis vuelos | ACME AIR</title>
+  <meta name="description" content="Listado de vuelos reservados y vuelos previos en ACME AIR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,32 +28,29 @@
       </div>
     </div>
 
-    <h1 class="titulo-divisor">Vuelos Disponibles</h1>
-    <section class="lista-vuelos" aria-label="Vuelos disponibles">
-      <a class="tarjeta tarjeta--vuelo" href="checkin.html">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+    <h1 class="titulo-divisor">Mis vuelos</h1>
+    <section class="lista-vuelos" aria-label="Listado de vuelos">
+      <article class="tarjeta tarjeta--vuelo">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Medellín</p>
-          <p class="tarjeta__detalle">Oct 10 · 05:30 - 06:30 · VAA025</p>
+          <p class="tarjeta__titulo">VAA025</p>
+          <p class="tarjeta__detalle">Bogotá - Barranquilla · Sep 29</p>
         </div>
-        <p class="tarjeta__precio">COP 450.000</p>
-      </a>
-      <a class="tarjeta tarjeta--vuelo" href="checkin.html">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+        <span class="estado estado--a-tiempo">A tiempo</span>
+      </article>
+      <article class="tarjeta tarjeta--vuelo">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Cali</p>
-          <p class="tarjeta__detalle">Oct 12 · 08:15 - 09:25 · VAA031</p>
+          <p class="tarjeta__titulo">VAA140</p>
+          <p class="tarjeta__detalle">Medellín - Cartagena · Oct 12</p>
         </div>
-        <p class="tarjeta__precio">COP 380.000</p>
-      </a>
-      <a class="tarjeta tarjeta--vuelo" href="checkin.html">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+        <span class="estado estado--a-tiempo">A tiempo</span>
+      </article>
+      <article class="tarjeta tarjeta--vuelo">
         <div class="tarjeta__datos">
-          <p class="tarjeta__titulo">Bogotá - Cartagena</p>
-          <p class="tarjeta__detalle">Oct 14 · 13:40 - 15:10 · VAA047</p>
+          <p class="tarjeta__titulo">VAA087</p>
+          <p class="tarjeta__detalle">Cali - Bogotá · Sep 15</p>
         </div>
-        <p class="tarjeta__precio">COP 520.600</p>
-      </a>
+        <span class="estado estado--aterrizo">Aterrizó</span>
+      </article>
     </section>
     <a class="btn btn-primario" href="menu.html">Volver al menú principal</a>
   </main>

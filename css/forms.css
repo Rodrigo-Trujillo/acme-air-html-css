@@ -1,0 +1,92 @@
+/* ==========================================================
+   ACME AIR - forms.css
+   Formularios: campos, listas desplegables, checkbox y ayudas
+   ========================================================== */
+
+/* ---------- Formulario ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  width: 100%;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+/* ---------- Campos de texto y listas desplegables ---------- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.campo__input {
+  width: 100%;
+  padding: var(--esp-3);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background-color: var(--color-fondo);
+  font-family: inherit;
+  font-size: var(--fs-base);
+  color: var(--color-texto);
+}
+
+.campo__input::placeholder {
+  color: var(--color-texto-suave);
+}
+
+.campo__input:focus-visible {
+  border-color: var(--color-primario);
+}
+
+/* ---------- Checkbox ---------- */
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-2);
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+  cursor: pointer;
+}
+
+.check__input {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--color-primario);
+}
+
+/* ---------- Textos y enlaces del formulario ---------- */
+.form__ayuda {
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+}
+
+.form__enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  font-size: var(--fs-pequena);
+}
+
+.titulo-divisor {
+  padding-bottom: var(--esp-2);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+/* ---------- Grupo de campos (fieldset) ---------- */
+.grupo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  min-width: 0;
+  margin: 0;
+  padding: var(--esp-3);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.grupo__titulo {
+  padding: 0 var(--esp-2);
+  font-weight: var(--fw-negrita);
+}

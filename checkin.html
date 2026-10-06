@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Entrada | ACME AIR</title>
-  <meta name="description" content="Realiza tu registro de entrada en ACME AIR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de entrada | ACME AIR</title>
+  <meta name="description" content="Registro de entrada de un vuelo o reserva en ACME AIR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/formularios.css">
+  <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -20,28 +20,22 @@
   </header>
 
   <main class="app-card">
+    <div class="usuario">
+      <img class="usuario__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
+      <div class="usuario__datos">
+        <p class="usuario__nombre">John Doe</p>
+        <a class="usuario__salir" href="index.html">Cerrar Sesión</a>
+      </div>
+    </div>
+
     <h1 class="titulo-divisor">Registro de Entrada</h1>
-
-    <form action="#" method="post">
-      <div class="form-grupo">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" class="form-control" required>
+    <form class="form" action="menu.html" method="get">
+      <div class="campo">
+        <label class="sr-only" for="reserva">Número de vuelo o reserva</label>
+        <input class="campo__input" type="text" id="reserva" name="reserva" placeholder="Número de vuelo o reserva" autocomplete="off">
       </div>
-
-      <div class="form-grupo">
-        <label for="documento">Número de documento</label>
-        <input type="text" id="documento" class="form-control" required>
-      </div>
-
-      <div class="form-grupo">
-        <label for="asiento">Número de asiento</label>
-        <input type="text" id="asiento" class="form-control" required>
-      </div>
-
-      <button type="submit" class="btn btn-principal">Confirmar</button>
+      <button class="btn btn-primario" type="submit">Guardar</button>
     </form>
-
-    <a href="vuelos.html" class="btn btn-secundario">Volver a vuelos</a>
   </main>
 
   <footer class="app-footer">

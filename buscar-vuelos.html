@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buscar Vuelos | ACME AIR</title>
-  <meta name="description" content="Busca vuelos disponibles en ACME AIR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buscar vuelos | ACME AIR</title>
+  <meta name="description" content="Búsqueda de vuelos en ACME AIR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/formularios.css">
+  <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -20,25 +20,37 @@
   </header>
 
   <main class="app-card">
+    <div class="usuario">
+      <img class="usuario__avatar" src="imagen/iconos/avatar.svg" alt="Avatar de John Doe">
+      <div class="usuario__datos">
+        <p class="usuario__nombre">John Doe</p>
+        <a class="usuario__salir" href="index.html">Cerrar Sesión</a>
+      </div>
+    </div>
+
     <h1 class="titulo-divisor">Buscar Vuelos</h1>
-
-    <form action="vuelos.html" method="get">
-      <div class="form-grupo">
-        <label for="origen">Origen</label>
-        <input type="text" id="origen" class="form-control" required>
+    <form class="form" action="vuelos.html" method="get">
+      <div class="campo">
+        <label class="sr-only" for="origen">Origen</label>
+        <input class="campo__input" type="text" id="origen" name="origen" placeholder="Origen" autocomplete="off">
       </div>
-
-      <div class="form-grupo">
-        <label for="destino">Destino</label>
-        <input type="text" id="destino" class="form-control" required>
+      <div class="campo">
+        <label class="sr-only" for="destino">Destino</label>
+        <input class="campo__input" type="text" id="destino" name="destino" placeholder="Destino" autocomplete="off">
       </div>
-
-      <div class="form-grupo">
-        <label for="fecha-salida">Fecha de salida</label>
-        <input type="date" id="fecha-salida" class="form-control" required>
+      <div class="campo">
+        <label class="sr-only" for="fecha-salida">Fecha de salida</label>
+        <input class="campo__input" type="date" id="fecha-salida" name="fecha-salida" placeholder="Fecha de salida">
       </div>
-
-      <button type="submit" class="btn btn-principal">Buscar</button>
+      <div class="campo">
+        <label class="sr-only" for="fecha-regreso">Fecha de regreso</label>
+        <input class="campo__input" type="date" id="fecha-regreso" name="fecha-regreso" placeholder="Fecha de regreso">
+      </div>
+      <label class="check">
+        <input class="check__input" type="checkbox" name="solo-ida">
+        <span>Solo ida</span>
+      </label>
+      <button class="btn btn-primario" type="submit">Buscar</button>
     </form>
   </main>
 
