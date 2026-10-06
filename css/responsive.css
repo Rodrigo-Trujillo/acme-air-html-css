@@ -13,3 +13,11 @@
 @media (min-width: 320px) {
   /* Ajustes para móvil: se completan al terminar cada vista */
 }
+
+/* ------------------------------------------------------------
+   TABLET — desde 768px
+   Más espacio: la tarjeta se centra y los textos crecen un poco.
+   ------------------------------------------------------------ */
+@media (min-width: 768px) {
+  /* Ajustes para tablet: se completan al terminar cada vista */
+}
