@@ -1,32 +1,93 @@
-/* ============================================================
-   responsive.css — Media queries (mobile-first)
-   Puntos de quiebre: 320px (móvil), 768px (tablet), 1024px (escritorio)
-   Los estilos base (móvil) viven en style.css, layout.css y forms.css.
-   Aquí solo se ajusta lo que cambia al crecer la pantalla.
-   ============================================================ */
+/* ==========================================================
+   ACME AIR - responsive.css
+   Mobile-first: los estilos base (style, forms y layout) sirven
+   desde 320 px; aquí solo se añaden mejoras con min-width.
+   Cada persona escribe SOLO dentro del bloque de sus vistas.
+   ========================================================== */
 
-/* ------------------------------------------------------------
-   MÓVIL — desde 320px
-   Los estilos base ya son para móvil; aquí solo van ajustes
-   puntuales para pantallas muy pequeñas.
-   ------------------------------------------------------------ */
+/* ===== 320px: móvil pequeño ===== */
 @media (min-width: 320px) {
-  /* Ajustes para móvil: se completan al terminar cada vista */
+  /* -- login (Rodrigo) -- */
+  .login-logo__imagen {
+    width: 8rem;
+  }
+
+  /* -- recuperar (Rodrigo) -- */
+  /* Sin ajustes: el formulario ya es fluido (max-width en forms.css) */
+
+  /* -- crear-contraseña (Rodrigo) -- */
+  /* Sin ajustes: usa el mismo formulario fluido */
+
+  /* -- menu (Sebastián) -- */
+  /* -- registro (Sebastián) -- */
+  /* -- mis-vuelos (Sebastián) -- */
+  /* -- buscar-vuelos (Dainer) -- */
+  /* -- vuelos (Dainer) -- */
+  /* -- checkin (Dainer) -- */
 }
 
-/* ------------------------------------------------------------
-   TABLET — desde 768px
-   Más espacio: la tarjeta se centra y los textos crecen un poco.
-   ------------------------------------------------------------ */
+/* ===== 768px: tableta ===== */
 @media (min-width: 768px) {
-  /* Ajustes para tablet: se completan al terminar cada vista */
+  /* -- login (Rodrigo) -- */
+  .login-logo {
+    padding-top: var(--esp-6);
+  }
+
+  .login-logo__imagen {
+    width: 12rem;
+  }
+
+  /* -- recuperar (Rodrigo) -- */
+  /* Más aire dentro de la tarjeta (se aplica a todas las vistas con tarjeta) */
+  .app-card {
+    padding: var(--esp-5) var(--esp-4);
+  }
+
+  /* -- crear-contraseña (Rodrigo) -- */
+  /* Usa los mismos ajustes de la tarjeta de recuperar */
+
+  /* -- menu (Sebastián) -- */
+  /* -- registro (Sebastián) -- */
+  /* -- mis-vuelos (Sebastián) -- */
+  /* -- buscar-vuelos (Dainer) -- */
+  /* -- vuelos (Dainer) -- */
+  /* -- checkin (Dainer) -- */
 }
 
-/* ------------------------------------------------------------
-   ESCRITORIO — desde 1024px
-   La vista se centra con padding lateral. El menú podrá mostrar
-   su barra lateral si el profesor lo confirma.
-   ------------------------------------------------------------ */
+/* ===== 1024px: escritorio (vista centrada con padding lateral) ===== */
 @media (min-width: 1024px) {
-  /* Ajustes para escritorio: se completan al terminar cada vista */
+  /* -- login (Rodrigo) -- */
+  .login-logo__imagen {
+    width: 14rem;
+  }
+
+  .app-card--plana {
+    flex: 0 1 auto;
+    margin: 0 auto var(--esp-5);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+  }
+
+  /* -- recuperar (Rodrigo) -- */
+  /* Tarjeta centrada con padding lateral y esquinas redondeadas */
+  .app-card {
+    padding: var(--esp-5) var(--esp-6);
+  }
+
+  .app-card:not(.app-card--plana) {
+    flex: 0 1 auto;
+    margin-bottom: var(--esp-5);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+  }
+
+  /* -- crear-contraseña (Rodrigo) -- */
+  /* Usa los mismos ajustes de la tarjeta de recuperar */
+
+  /* -- menu (Sebastián): barra lateral + grid de tarjetas -- */
+  /* -- registro (Sebastián) -- */
+  /* -- mis-vuelos (Sebastián) -- */
+  /* -- buscar-vuelos (Dainer) -- */
+  /* -- vuelos (Dainer) -- */
+  /* -- checkin (Dainer) -- */
 }
