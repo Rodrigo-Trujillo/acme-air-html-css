@@ -10,3 +10,16 @@
   --sidebar-width: 260px;
   --footer-height: 60px;
 }
+
+/* Header principal */
+.main-header {
+  height: var(--header-height);
+  background-color: var(--color-primary, #1a365d);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
