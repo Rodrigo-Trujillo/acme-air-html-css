@@ -32,6 +32,22 @@ Ofrecer una interfaz limpia, intuitiva y responsiva, con identidad visual cohere
 | Registro de entrada | `checkin.html` | Guardar → Menú |
 | Mis vuelos | `mis-vuelos.html` | Volver → Menú |
 
+
+## Capturas de las vistas
+
+| Iniciar sesión | Menú principal | Registro |
+| --- | --- | --- |
+| ![Iniciar sesión](docs/capturas/01-login.png) | ![Menú principal](docs/capturas/02-menu.png) | ![Registro](docs/capturas/03-registro.png) |
+
+| Recuperar contraseña | Crear contraseña | Búsqueda de vuelos |
+| --- | --- | --- |
+| ![Recuperar contraseña](docs/capturas/04-recuperar-contrasena.png) | ![Crear contraseña](docs/capturas/05-crear-contrasena.png) | ![Búsqueda de vuelos](docs/capturas/06-buscar-vuelos.png) |
+
+| Vuelos disponibles | Registro de entrada | Mis vuelos |
+| --- | --- | --- |
+| ![Vuelos disponibles](docs/capturas/07-vuelos-disponibles.png) | ![Registro de entrada](docs/capturas/08-registro-de-entrada.png) | ![Mis vuelos](docs/capturas/09-mis-vuelos.png) |
+
+
 ## Estructura del proyecto
 
 ```
