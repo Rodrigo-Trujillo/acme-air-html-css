@@ -21,3 +21,12 @@
 @media (min-width: 768px) {
   /* Ajustes para tablet: se completan al terminar cada vista */
 }
+
+/* ------------------------------------------------------------
+   ESCRITORIO — desde 1024px
+   La vista se centra con padding lateral. El menú podrá mostrar
+   su barra lateral si el profesor lo confirma.
+   ------------------------------------------------------------ */
+@media (min-width: 1024px) {
+  /* Ajustes para escritorio: se completan al terminar cada vista */
+}
