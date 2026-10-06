@@ -9,12 +9,25 @@
   --header-height: 70px;
   --sidebar-width: 260px;
   --footer-height: 60px;
+  --color-primary: #1a365d;
+  --color-secondary: #2b6cb0;
+  --color-bg-main: #f7fafc;
+  --color-bg-sidebar: #ffffff;
+  --color-bg-footer: #edf2f7;
+  --color-border: #e2e8f0;
+  --color-text: #2d3748;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg-main);
 }
 
 /* Header principal */
 .main-header {
   height: var(--header-height);
-  background-color: var(--color-primary, #1a365d);
+  background-color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,36 +35,54 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  color: #ffffff;
 }
 
-/* Sidebar */
-.main-sidebar {
-  width: var(--sidebar-width);
-  background-color: var(--color-bg-sidebar, #f7fafc);
-  border-right: 1px solid var(--color-border, #e2e8f0);
-  min-height: calc(100vh - var(--header-height));
-  padding: 1.5rem 1rem;
-}
-
-/* Contenedor principal */
+/* Contenedor principal y Sidebar */
 .app-container {
   display: flex;
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.main-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--color-bg-sidebar);
+  border-right: 1px solid var(--color-border);
+  padding: 1.5rem 1rem;
 }
 
 .main-content {
   flex: 1;
   padding: 2rem;
-  background-color: var(--color-bg-main, #ffffff);
+  background-color: var(--color-bg-main);
 }
 
-/* Footer */
-.main-footer {
+/* Componentes de la guía */
+.app-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.login-logo {
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Pie de página */
+.main-footer,
+.app-footer {
   height: var(--footer-height);
-  background-color: var(--color-bg-footer, #edf2f7);
+  background-color: var(--color-bg-footer);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--color-border, #e2e8f0);
+  border-top: 1px solid var(--color-border);
   font-size: 0.875rem;
+  color: #718096;
 }
