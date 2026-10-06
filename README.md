@@ -31,3 +31,27 @@ Ofrecer una interfaz limpia, intuitiva y responsiva, con identidad visual cohere
 | Vuelos disponibles | `vuelos.html` | Volver → Menú |
 | Registro de entrada | `checkin.html` | Guardar → Menú |
 | Mis vuelos | `mis-vuelos.html` | Volver → Menú |
+
+## Estructura del proyecto
+
+```
+acme-air-html-css/
+├── index.html
+├── menu.html
+├── registro.html
+├── crear-contraseña.html
+├── buscar-vuelos.html
+├── vuelos.html
+├── checkin.html
+├── mis-vuelos.html
+├── recuperar.html
+├── css/
+│   ├── style.css
+│   ├── forms.css
+│   ├── layout.css
+│   └── responsive.css
+└── imagen/
+    ├── logo.png
+    ├── iconos/
+    └── fondos/
+```
