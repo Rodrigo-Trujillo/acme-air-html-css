@@ -1,0 +1,170 @@
+/* ==========================================================
+   ACME AIR - style.css
+   Variables, reset, tipografía base y componentes comunes
+   ========================================================== */
+
+:root {
+  /* Colores */
+  --color-degradado-inicio: #d13cff;
+  --color-degradado-fin: #00b0ff;
+  --degradado: linear-gradient(90deg, var(--color-degradado-inicio), var(--color-degradado-fin));
+  --color-primario: #2196f3;
+  --color-primario-hover: #1976d2;   /* tomar de la maqueta */
+  --color-texto: #212121;
+  --color-texto-suave: #757575;
+  --color-borde: #e0e0e0;
+  --color-fondo: #ffffff;
+  --color-fondo-suave: #f5f5f5;
+  --color-estado-a-tiempo: #2e7d32;  /* tomar de la maqueta */
+  --color-estado-aterrizo: #757575;  /* tomar de la maqueta */
+
+  /* Tipografía */
+  --fuente: 'Poppins', 'Open Sans', sans-serif;
+  --fs-base: 1rem;
+  --fs-pequena: 0.875rem;
+  --fs-titulo: clamp(1.5rem, 1.1rem + 1.6vw, 2rem);
+  --fw-normal: 400;
+  --fw-media: 500;
+  --fw-negrita: 600;
+
+  /* Espaciados */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 1rem;
+  --esp-4: 1.5rem;
+  --esp-5: 2rem;
+  --esp-6: 3rem;
+
+  /* Formas y sombras */
+  --radio: 8px;
+  --radio-tarjeta: 24px;
+  --sombra: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --sombra-tarjeta: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ---------- Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ---------- Base de texto ---------- */
+body {
+  font-family: var(--fuente);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+h1 {
+  font-size: var(--fs-titulo);
+  font-weight: var(--fw-negrita);
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------- Encabezado con degradado ---------- */
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-2);
+  padding: var(--esp-5) var(--esp-3) var(--esp-6);
+  background: var(--degradado);
+  color: var(--color-fondo);
+  text-align: center;
+}
+
+.app-header__icono {
+  width: 3rem;
+  height: auto;
+}
+
+.app-header__marca {
+  font-size: var(--fs-pequena);
+  font-weight: var(--fw-media);
+}
+
+
+/* ---------- Botones ---------- */
+.btn {
+  display: block;
+  width: 100%;
+  padding: var(--esp-3);
+  border: none;
+  border-radius: var(--radio);
+  font-family: var(--fuente);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-negrita);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primario:hover {
+  background-color: var(--color-primario-hover);
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+
+/* ---------- Accesibilidad ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
