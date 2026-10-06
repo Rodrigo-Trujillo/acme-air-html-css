@@ -17,3 +17,17 @@ Ofrecer una interfaz limpia, intuitiva y responsiva, con identidad visual cohere
 - Rodrigo Trujillo
 - Sebastián Panche
 - Dainer Cuteño
+
+## Guía de navegación
+
+| Vista | Archivo | Va hacia |
+| --- | --- | --- |
+| Iniciar sesión | `index.html` | Ingresar → Menú · Crear cuenta → Registro · ¿Olvidaste tu contraseña? → Recuperar contraseña |
+| Menú principal | `menu.html` | Buscar vuelos · Registrarse (check-in) · Mis vuelos · Cerrar sesión → Iniciar sesión |
+| Registro | `registro.html` | Guardar → Crear contraseña |
+| Recuperar contraseña | `recuperar.html` | Enviar → Crear contraseña |
+| Crear contraseña | `crear-contraseña.html` | Guardar → Menú |
+| Búsqueda de vuelos | `buscar-vuelos.html` | Buscar → Vuelos disponibles |
+| Vuelos disponibles | `vuelos.html` | Volver → Menú |
+| Registro de entrada | `checkin.html` | Guardar → Menú |
+| Mis vuelos | `mis-vuelos.html` | Volver → Menú |
