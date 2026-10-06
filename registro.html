@@ -40,7 +40,14 @@
       </div>
       <div class="campo">
         <label class="sr-only" for="ciudad">Ciudad</label>
-        <input class="campo__input" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" autocomplete="address-level2">
+        <select class="campo__input" id="ciudad" name="ciudad">
+          <option value="" disabled selected>Ciudad</option>
+          <option>Bogotá</option>
+          <option>Medellín</option>
+          <option>Cali</option>
+          <option>Barranquilla</option>
+          <option>Cartagena</option>
+        </select>
       </div>
       <button class="btn btn-primario" type="submit">Guardar</button>
     </form>

@@ -1,88 +1,155 @@
-/* Reset y estructura general */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ==========================================================
+   ACME AIR - layout.css
+   Estructura de la página, bloque de usuario, tarjetas y grids
+   (diseño base móvil; los cambios por ancho van en responsive.css)
+   ========================================================== */
 
-:root {
-  --header-height: 70px;
-  --sidebar-width: 260px;
-  --footer-height: 60px;
-  --color-primary: #1a365d;
-  --color-secondary: #2b6cb0;
-  --color-bg-main: #f7fafc;
-  --color-bg-sidebar: #ffffff;
-  --color-bg-footer: #edf2f7;
-  --color-border: #e2e8f0;
-  --color-text: #2d3748;
-}
-
+/* ---------- Estructura de la página ---------- */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  color: var(--color-text);
-  background-color: var(--color-bg-main);
-}
-
-/* Header principal */
-.main-header {
-  height: var(--header-height);
-  background-color: var(--color-primary);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  color: #ffffff;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Contenedor principal y Sidebar */
-.app-container {
-  display: flex;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
-}
-
-.main-sidebar {
-  width: var(--sidebar-width);
-  background-color: var(--color-bg-sidebar);
-  border-right: 1px solid var(--color-border);
-  padding: 1.5rem 1rem;
-}
-
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  background-color: var(--color-bg-main);
-}
-
-/* Componentes de la guía */
 .app-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--esp-4);
+  width: 100%;
+  max-width: 40rem;
+  margin: calc(var(--esp-4) * -1) auto 0;
+  padding: var(--esp-4) var(--esp-3);
+  background-color: var(--color-fondo);
+  border-radius: var(--radio-tarjeta) var(--radio-tarjeta) 0 0;
+}
+
+.app-card--plana {
+  margin-top: 0;
+  border-radius: 0;
+}
+
+.app-footer {
+  padding: var(--esp-3);
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+  text-align: center;
 }
 
 .login-logo {
-  max-width: 180px;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  padding: var(--esp-5) var(--esp-3) var(--esp-3);
 }
 
-/* Pie de página */
-.main-footer,
-.app-footer {
-  height: var(--footer-height);
-  background-color: var(--color-bg-footer);
+.login-logo__imagen {
+  width: 10rem;
+  height: auto;
+}
+
+/* ---------- Bloque de usuario ---------- */
+.usuario {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.875rem;
-  color: #718096;
+  gap: var(--esp-3);
+}
+
+.usuario__avatar {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.usuario__nombre {
+  font-weight: var(--fw-negrita);
+}
+
+.usuario__salir {
+  font-size: var(--fs-pequena);
+}
+
+/* ---------- Tarjetas (menú y vuelos) ---------- */
+.lista-tarjetas {
+  display: grid;
+  gap: var(--esp-3);
+}
+
+.tarjeta {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  padding: var(--esp-3);
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-tarjeta);
+  color: var(--color-texto);
+}
+
+.tarjeta:hover {
+  text-decoration: none;
+}
+
+.tarjeta__icono {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.tarjeta__texto {
+  flex: 1;
+  font-weight: var(--fw-media);
+}
+
+.tarjeta__chevron {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ---------- Tarjetas de vuelo y estados ---------- */
+.lista-vuelos {
+  display: grid;
+  gap: var(--esp-3);
+}
+
+.tarjeta__datos {
+  flex: 1;
+  min-width: 0;
+}
+
+.tarjeta__titulo {
+  font-weight: var(--fw-negrita);
+}
+
+.tarjeta__detalle {
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+}
+
+.tarjeta__precio {
+  font-weight: var(--fw-negrita);
+  white-space: nowrap;
+}
+
+.estado {
+  font-size: var(--fs-pequena);
+  font-weight: var(--fw-negrita);
+  text-transform: uppercase;
+}
+
+.estado--a-tiempo {
+  color: var(--color-estado-a-tiempo);
+}
+
+.estado--aterrizo {
+  color: var(--color-estado-aterrizo);
+}
+
+/* ---------- Barra lateral (solo escritorio) ---------- */
+/* Oculta en móvil y tableta; en 1024 px se muestra desde responsive.css */
+.sidebar {
+  display: none;
 }
