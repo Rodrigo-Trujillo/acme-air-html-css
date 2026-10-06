@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Vuelos | ACME AIR</title>
+  <meta name="description" content="Busca vuelos disponibles en ACME AIR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/formularios.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="app-header">
+    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
+    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+  </header>
+
+  <main class="app-card">
+    <h1 class="titulo-divisor">Buscar Vuelos</h1>
+
+    <form action="vuelos.html" method="get">
+      <div class="form-grupo">
+        <label for="origen">Origen</label>
+        <input type="text" id="origen" class="form-control" required>
+      </div>
+
+      <div class="form-grupo">
+        <label for="destino">Destino</label>
+        <input type="text" id="destino" class="form-control" required>
+      </div>
+
+      <div class="form-grupo">
+        <label for="fecha-salida">Fecha de salida</label>
+        <input type="date" id="fecha-salida" class="form-control" required>
+      </div>
+
+      <button type="submit" class="btn btn-principal">Buscar</button>
+    </form>
+  </main>
+
+  <footer class="app-footer">
+    <small>© 2026 ACME AIR</small>
+  </footer>
+</body>
+</html>
