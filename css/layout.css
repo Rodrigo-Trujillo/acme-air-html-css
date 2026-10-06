@@ -44,3 +44,14 @@
   padding: 2rem;
   background-color: var(--color-bg-main, #ffffff);
 }
+
+/* Footer */
+.main-footer {
+  height: var(--footer-height);
+  background-color: var(--color-bg-footer, #edf2f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  font-size: 0.875rem;
+}
