@@ -29,47 +29,59 @@
     </div>
 
     <h1>Mis Vuelos</h1>
-    <section class="lista-vuelos" aria-label="Listado de vuelos">
-      <div class="tarjeta tarjeta--vuelo">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
-        <div class="tarjeta__datos">
-          <p class="tarjeta__detalle">05:30 - 06:30</p>
-          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
-          <p class="tarjeta__detalle">Sep 29</p>
+    <div class="filtro-vuelos" role="radiogroup" aria-label="Filtrar vuelos por estado">
+      <input class="filtro-vuelos__radio" type="radio" name="filtro-estado" id="filtro-todos" checked>
+      <label class="filtro-vuelos__chip" for="filtro-todos">Todos</label>
+      <input class="filtro-vuelos__radio" type="radio" name="filtro-estado" id="filtro-a-tiempo">
+      <label class="filtro-vuelos__chip" for="filtro-a-tiempo">A tiempo</label>
+      <input class="filtro-vuelos__radio" type="radio" name="filtro-estado" id="filtro-en-abordaje">
+      <label class="filtro-vuelos__chip" for="filtro-en-abordaje">En abordaje</label>
+      <input class="filtro-vuelos__radio" type="radio" name="filtro-estado" id="filtro-aterrizo">
+      <label class="filtro-vuelos__chip" for="filtro-aterrizo">Aterrizó</label>
+
+      <section class="lista-vuelos" aria-label="Listado de vuelos">
+        <div class="tarjeta tarjeta--vuelo" data-estado="a-tiempo">
+          <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+          <div class="tarjeta__datos">
+            <p class="tarjeta__detalle">05:30 - 06:30</p>
+            <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+            <p class="tarjeta__detalle">Sep 29</p>
+          </div>
+          <div class="tarjeta__lateral">
+            <p class="tarjeta__detalle">VAA025</p>
+            <p class="estado">A tiempo</p>
+            <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+          </div>
         </div>
-        <div class="tarjeta__lateral">
-          <p class="tarjeta__detalle">VAA025</p>
-          <p class="estado">A tiempo</p>
-          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+        <div class="tarjeta tarjeta--vuelo" data-estado="aterrizo">
+          <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+          <div class="tarjeta__datos">
+            <p class="tarjeta__detalle">10:30 - 12:00</p>
+            <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+            <p class="tarjeta__detalle">Jul 05</p>
+          </div>
+          <div class="tarjeta__lateral">
+            <p class="tarjeta__detalle">VAA185</p>
+            <p class="estado">Aterrizó</p>
+            <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+          </div>
         </div>
-      </div>
-      <div class="tarjeta tarjeta--vuelo">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
-        <div class="tarjeta__datos">
-          <p class="tarjeta__detalle">10:30 - 12:00</p>
-          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
-          <p class="tarjeta__detalle">Jul 05</p>
+        <div class="tarjeta tarjeta--vuelo" data-estado="aterrizo">
+          <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
+          <div class="tarjeta__datos">
+            <p class="tarjeta__detalle">05:30 - 06:30</p>
+            <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
+            <p class="tarjeta__detalle">Feb 04</p>
+          </div>
+          <div class="tarjeta__lateral">
+            <p class="tarjeta__detalle">VAA800</p>
+            <p class="estado">Aterrizó</p>
+            <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
+          </div>
         </div>
-        <div class="tarjeta__lateral">
-          <p class="tarjeta__detalle">VAA185</p>
-          <p class="estado">Aterrizó</p>
-          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
-        </div>
-      </div>
-      <div class="tarjeta tarjeta--vuelo">
-        <img class="tarjeta__icono" src="imagen/iconos/avion-despegando.svg" alt="">
-        <div class="tarjeta__datos">
-          <p class="tarjeta__detalle">05:30 - 06:30</p>
-          <p class="tarjeta__detalle tarjeta__detalle--fuerte">1h 30 min</p>
-          <p class="tarjeta__detalle">Feb 04</p>
-        </div>
-        <div class="tarjeta__lateral">
-          <p class="tarjeta__detalle">VAA800</p>
-          <p class="estado">Aterrizó</p>
-          <p class="tarjeta__detalle">Bogotá - Barranquilla</p>
-        </div>
-      </div>
-    </section>
+      </section>
+      <p class="filtro-vuelos__vacio">No hay vuelos con este estado.</p>
+    </div>
     <a class="btn btn-primario" href="menu.html" title="Volver al menú principal">Volver</a>
   </main>
 
