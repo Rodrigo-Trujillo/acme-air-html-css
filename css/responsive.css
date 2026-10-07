@@ -61,59 +61,8 @@
   /* -- crear-contraseña (Rodrigo) -- */
   /* Usa los mismos ajustes de la tarjeta de recuperar */
 
-  /* -- menu (Sebastián) -- */
-  /* Sin ajustes: en tableta el menú sigue en una columna */
-
-  /* -- registro (Sebastián) -- */
-  /* Sin ajustes: el formulario se queda en su ancho máximo */
-
-  /* -- mis-vuelos (Sebastián) -- */
-  /* Tarjetas de vuelo en dos columnas */
-  .lista-vuelos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* -- buscar-vuelos (Dainer) -- */
-  /* Sin ajustes: el formulario se queda en su ancho máximo */
-
-  /* -- vuelos (Dainer) -- */
-  /* Usa las dos columnas de .lista-vuelos definidas arriba */
-
-  /* -- checkin (Dainer) -- */
-  /* Sin ajustes: el formulario se queda en su ancho máximo */
-}
-
-/* ===== 1024px: escritorio (vista centrada con padding lateral) ===== */
-@media (min-width: 1024px) {
-  /* -- login (Rodrigo) -- */
-  .login-logo__imagen {
-    width: 14rem;
-  }
-
-  .app-card--plana {
-    flex: 0 1 auto;
-    margin: 0 auto var(--esp-5);
-    border-radius: var(--radio-tarjeta);
-    box-shadow: var(--sombra-tarjeta);
-  }
-
-  /* -- recuperar (Rodrigo) -- */
-  /* Tarjeta centrada con padding lateral y esquinas redondeadas */
-  .app-card {
-    padding: var(--esp-5) var(--esp-6);
-  }
-
-  .app-card:not(.app-card--plana) {
-    flex: 0 1 auto;
-    margin-bottom: var(--esp-5);
-    border-radius: var(--radio-tarjeta);
-    box-shadow: var(--sombra-tarjeta);
-  }
-
-  /* -- crear-contraseña (Rodrigo) -- */
-  /* Usa los mismos ajustes de la tarjeta de recuperar */
-
   /* -- menu (Sebastián): barra lateral + grid de tarjetas -- */
+  /* Según el enunciado, la vista de tableta y escritorio es la misma */
   .pagina-menu {
     flex-direction: row;
     background-color: var(--color-fondo-suave);
@@ -212,7 +161,7 @@
     flex: 1;
   }
 
-  .pagina-menu .app-card {
+  body.pagina-menu .app-card {
     flex: 1;
     max-width: none;
     margin: 0;
@@ -278,6 +227,59 @@
   .pagina-menu .app-footer {
     background-color: transparent;
   }
+
+
+  /* -- registro (Sebastián) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
+
+  /* -- mis-vuelos (Sebastián) -- */
+  /* Tarjetas de vuelo en dos columnas */
+  .lista-vuelos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* -- buscar-vuelos (Dainer) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
+
+  /* -- vuelos (Dainer) -- */
+  /* Usa las dos columnas de .lista-vuelos definidas arriba */
+
+  /* -- checkin (Dainer) -- */
+  /* Sin ajustes: el formulario se queda en su ancho máximo */
+}
+
+/* ===== 1024px: escritorio (vista centrada con padding lateral) ===== */
+@media (min-width: 1024px) {
+  /* -- login (Rodrigo) -- */
+  .login-logo__imagen {
+    width: 14rem;
+  }
+
+  .app-card--plana {
+    flex: 0 1 auto;
+    margin: 0 auto var(--esp-5);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+  }
+
+  /* -- recuperar (Rodrigo) -- */
+  /* Tarjeta centrada con padding lateral y esquinas redondeadas */
+  .app-card {
+    padding: var(--esp-5) var(--esp-6);
+  }
+
+  .app-card:not(.app-card--plana) {
+    flex: 0 1 auto;
+    margin-bottom: var(--esp-5);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+  }
+
+  /* -- crear-contraseña (Rodrigo) -- */
+  /* Usa los mismos ajustes de la tarjeta de recuperar */
+
+  /* -- menu (Sebastián) -- */
+  /* Sin ajustes: la barra lateral y el grid empiezan en tableta (768 px) */
 
   /* -- registro (Sebastián) -- */
   /* Sin ajustes: tarjeta centrada (ver recuperar) */
