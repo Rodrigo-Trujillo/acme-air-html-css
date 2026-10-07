@@ -223,6 +223,73 @@ body {
   text-transform: uppercase;
 }
 
+/* ---------- Filtro de vuelos por estado (solo CSS, sin JavaScript) ---------- */
+/* Los radios van ANTES de la lista: el selector ~ solo mira hacia adelante */
+.filtro-vuelos {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--esp-2);
+}
+
+.filtro-vuelos .lista-vuelos,
+.filtro-vuelos__vacio {
+  flex: 0 0 100%;
+}
+
+.filtro-vuelos__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.filtro-vuelos__chip {
+  padding: var(--esp-1) var(--esp-3);
+  font-size: var(--fs-pequena);
+  color: var(--color-texto-suave);
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filtro-vuelos__chip:hover {
+  border-color: var(--color-primario);
+}
+
+.filtro-vuelos__radio:checked + .filtro-vuelos__chip {
+  color: var(--color-fondo);
+  background: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.filtro-vuelos__radio:focus-visible + .filtro-vuelos__chip {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
+/* Cada filtro oculta las tarjetas que NO tienen su estado */
+#filtro-a-tiempo:checked ~ .lista-vuelos .tarjeta:not([data-estado="a-tiempo"]),
+#filtro-en-abordaje:checked ~ .lista-vuelos .tarjeta:not([data-estado="en-abordaje"]),
+#filtro-aterrizo:checked ~ .lista-vuelos .tarjeta:not([data-estado="aterrizo"]) {
+  display: none;
+}
+
+/* Mensaje cuando el filtro no encuentra ningún vuelo */
+.filtro-vuelos__vacio {
+  display: none;
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+#filtro-a-tiempo:checked ~ .lista-vuelos:not(:has([data-estado="a-tiempo"])) + .filtro-vuelos__vacio,
+#filtro-en-abordaje:checked ~ .lista-vuelos:not(:has([data-estado="en-abordaje"])) + .filtro-vuelos__vacio,
+#filtro-aterrizo:checked ~ .lista-vuelos:not(:has([data-estado="aterrizo"])) + .filtro-vuelos__vacio {
+  display: block;
+}
+
 /* ---------- Barra lateral (solo escritorio) ---------- */
 /* Oculta en móvil y tableta; en 1024 px se muestra desde responsive.css */
 .sidebar {
