@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buscar vuelos | ACME AIR</title>
+  <title>Búsqueda de vuelos | ACME AIR</title>
   <meta name="description" content="Búsqueda de vuelos en ACME AIR">
+  <link rel="icon" href="imagen/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,8 +16,7 @@
 </head>
 <body>
   <header class="app-header">
-    <img class="app-header__icono" src="imagen/iconos/avion-blanco.svg" alt="">
-    <p class="app-header__marca">ACME AIR – Flying to your dreams</p>
+    <img class="app-header__logo" src="imagen/logo-blanco.svg" alt="ACME AIR - Flying to your dreams">
   </header>
 
   <main class="app-card">
@@ -28,8 +28,12 @@
       </div>
     </div>
 
-    <h1 class="titulo-divisor">Buscar Vuelos</h1>
+    <h1>Búsqueda de Vuelos</h1>
     <form class="form" action="vuelos.html" method="get">
+      <label class="check">
+        <input class="check__input" type="checkbox" name="solo-ida">
+        <span>Solo ida</span>
+      </label>
       <div class="campo">
         <label class="sr-only" for="origen">Origen</label>
         <input class="campo__input" type="text" id="origen" name="origen" placeholder="Origen" autocomplete="off">
@@ -40,17 +44,16 @@
       </div>
       <div class="campo">
         <label class="sr-only" for="fecha-salida">Fecha de salida</label>
-        <input class="campo__input" type="date" id="fecha-salida" name="fecha-salida" title="Fecha de salida">
+        <input class="campo__input" type="text" id="fecha-salida" name="fecha-salida" placeholder="Fecha de salida" autocomplete="off">
       </div>
       <div class="campo">
         <label class="sr-only" for="fecha-regreso">Fecha de regreso</label>
-        <input class="campo__input" type="date" id="fecha-regreso" name="fecha-regreso" title="Fecha de regreso">
+        <input class="campo__input" type="text" id="fecha-regreso" name="fecha-regreso" placeholder="Fecha de regreso" autocomplete="off">
       </div>
-      <label class="check">
-        <input class="check__input" type="checkbox" name="solo-ida">
-        <span>Solo ida</span>
-      </label>
       <button class="btn btn-primario" type="submit">Buscar</button>
+      <p class="form__enlaces">
+        <a href="menu.html">Volver al menú principal</a>
+      </p>
     </form>
   </main>
 
