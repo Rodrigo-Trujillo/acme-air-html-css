@@ -2,6 +2,15 @@
 
 Maquetación de la aplicación web móvil de **ACME AIR**, una aerolínea internacional que renueva su experiencia digital. El proyecto se construye únicamente con **HTML5 y CSS3**, sin JavaScript, a partir de las maquetas del departamento de diseño UI/UX.
 
+## Tabla de contenido
+
+- [Objetivo](#objetivo)
+- [Tecnologías](#tecnologías)
+- [Integrantes](#integrantes)
+- [Guía de navegación](#guía-de-navegación)
+- [Capturas de las vistas: mockup vs resultado](#capturas-de-las-vistas-mockup-vs-resultado)
+- [Estructura del proyecto](#estructura-del-proyecto)
+
 ## Objetivo
 
 Ofrecer una interfaz limpia, intuitiva y responsiva, con identidad visual coherente y navegación simulada entre las 9 vistas, desde el inicio de sesión hasta la consulta de vuelos.
