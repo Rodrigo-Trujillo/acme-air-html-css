@@ -249,7 +249,7 @@
 }
 
 /* ===== 1024px: escritorio (vista centrada con padding lateral) ===== */
-@media (min-width: 1024px) {
+@media (min-width: 1021px) {
   /* -- login (Rodrigo) -- */
   .login-logo__imagen {
     width: 14rem;
